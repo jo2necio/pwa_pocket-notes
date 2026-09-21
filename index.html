@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0b5cab">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Pocket Notes">
+  <title>Pocket Notes</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app">
+    <header>
+      <span class="eyebrow">MY FIRST PWA</span>
+      <h1>Pocket Notes</h1>
+      <p id="status" role="status">Ready</p>
+    </header>
+
+    <form id="noteForm">
+      <label for="note">Add a note</label>
+      <div class="composer">
+        <input id="note" name="note" maxlength="80" placeholder="Example: Buy printer ink" required>
+        <button type="submit">Add</button>
+      </div>
+    </form>
+
+    <section aria-labelledby="notesHeading">
+      <div class="section-title">
+        <h2 id="notesHeading">Saved on this phone</h2>
+        <button id="clearButton" class="text-button" type="button">Clear all</button>
+      </div>
+      <ul id="notes"></ul>
+      <p id="emptyMessage" class="empty">No notes yet. Add your first one above.</p>
+    </section>
+  </main>
+  <script src="app.js" defer></script>
+</body>
+</html>
